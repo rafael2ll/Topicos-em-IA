@@ -12,10 +12,10 @@ parser.add_argument('path', type=str,
 parser.add_argument('--separator', type=str, default="comma",
                     help='change the dataset separator style (default: comma) [comma, semicolon, tab]')
 parser.add_argument('--has-header', type=bool, default=False,
-                    help='hasHeader')
+                    help='first line contains column name')
+args = parser.parse_args()
 
 if __name__ == '__main__':
-    args = parser.parse_args()
     separator = CommaSeparator()
     if args.separator == 'semicolon':
         separator = SemicolonSeparator()
