@@ -8,8 +8,7 @@ from domain.separators.comma_separator import CommaSeparator
 parser = argparse.ArgumentParser(description='Input Args')
 parser.add_argument('path', type=str,
                     help='Raw dataset path')
-parser.add_argument('--nro-clusters', type=int, default=3,
-                    help='Nro of clusters')
+
 parser.add_argument('--has-header', type=bool, default=False,
                     help='first line contains column name')
 

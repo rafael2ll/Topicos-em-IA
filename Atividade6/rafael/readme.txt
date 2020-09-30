@@ -4,13 +4,11 @@ Integrantes:
 
 - Requisitos:
    - Python3.0 ou superior
-
+   - Executar: pip3 install numpy
+   
 - Comandos:
-    Para distancia euclidiana:
-        - python3 main.py "caminho_do_arquivo_de_entrada" --distance euclidean
-
-    Para distancia Manhattan:
-        - python3 main.py "caminho_do_arquivo_de_entrada" --distance manhattan
+    - python3 main.py "caminho_do_arquivo_de_entrada" --nro-clusters {numero}
+    - Exemplo: python3 main.py ./data/iris.csv --nro-clusters 3
 
    Caso o arquivo possua header com nome das colunas:
     - python3 main.py "caminho_do_arquivo_de_entrada" --has-header=true
@@ -19,4 +17,4 @@ Integrantes:
     - python3 main.py -h
 
 - Resultados:
-    - Um arquivo csv na pasta que o comando foi executado contendo o nome do arquivo de entrada + _dist.csv
+    - Um arquivo csv na pasta que o comando foi executado contendo o nome do arquivo de entrada + _clustered.csv

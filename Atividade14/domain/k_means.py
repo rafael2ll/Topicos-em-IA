@@ -34,7 +34,6 @@ class KMeans:
         for i in range(max_retries):
             self.rotate()
             has_changed = self.update_all_centroid()
-            print('New Centroids: {}', self.centroids)
             if not any(has_changed):
                 break
 
