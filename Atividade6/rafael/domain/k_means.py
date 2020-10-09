@@ -7,7 +7,7 @@ from domain.models import InstanceDataset, Instance
 
 
 class KMeans:
-    def __init__(self, dataset: InstanceDataset, k: int):
+    def __init__(self, dataset: InstanceDataset, k: int = 2):
         self.dataset = dataset
         count = [x for x in range(dataset.rows)]
         random.shuffle(count)
@@ -30,7 +30,7 @@ class KMeans:
     def update_all_centroid(self):
         return [self.update_centroid(centroid_idx) for centroid_idx in range(len(self.centroids))]
 
-    def rotate_all(self, max_retries: int = 100):
+    def rotate_all(self, max_retries: int = 3):
         for i in range(max_retries):
             self.rotate()
             has_changed = self.update_all_centroid()

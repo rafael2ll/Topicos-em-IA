@@ -7,8 +7,8 @@ Integrantes:
    - Executar: pip3 install numpy
    
 - Comandos:
-    - python3 main.py "caminho_do_arquivo_de_entrada" --nro-clusters {numero}
-    - Exemplo: python3 main.py ./data/iris.csv --nro-clusters 3
+    - python3 main.py "caminho_do_arquivo_de_entrada"
+    - Exemplo: python3 main.py ./data/iris.csv
 
    Caso o arquivo possua header com nome das colunas:
     - python3 main.py "caminho_do_arquivo_de_entrada" --has-header=true
@@ -17,4 +17,5 @@ Integrantes:
     - python3 main.py -h
 
 - Resultados:
-    - Um arquivo csv na pasta que o comando foi executado contendo o nome do arquivo de entrada + _clustered.csv
+    - 3 arquivos csv na pasta que o comando foi executado contendo o resultado da execução dos 3 k-means
+    - No console de execução mostra o passo-a-passo do cálculo do SSWC  e a sumarização final.
